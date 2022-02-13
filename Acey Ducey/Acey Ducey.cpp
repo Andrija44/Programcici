@@ -90,9 +90,9 @@ int main() {
 		//ovo nije nuzno, no po meni lijepse izgleda
 		if (get<1>(brojceki) > get<0>(brojceki))
 		{
-			if (get<0>(brojceki) > get<2>(brojceki) || get<1>(brojceki) < get<2>(brojceki))
+			if (get<0>(brojceki) < get<2>(brojceki) && get<1>(brojceki) > get<2>(brojceki))
 				win = 1;
-			else if (get<0>(brojceki) <= get<2>(brojceki) && get<1>(brojceki) >= get<2>(brojceki))
+			else if (get<0>(brojceki) >= get<2>(brojceki) || get<1>(brojceki) <= get<2>(brojceki))
 				win = 0;
 
 			ispis(get<0>(brojceki));
@@ -100,9 +100,9 @@ int main() {
 		}
 		else
 		{
-			if (get<1>(brojceki) > get<2>(brojceki) || get<0>(brojceki) < get<2>(brojceki))
+			if (get<1>(brojceki) < get<2>(brojceki) && get<0>(brojceki) > get<2>(brojceki))
 				win = 1;
-			else if (get<1>(brojceki) <= get<2>(brojceki) && get<0>(brojceki) >= get<2>(brojceki))
+			else if (get<1>(brojceki) >= get<2>(brojceki) || get<0>(brojceki) <= get<2>(brojceki))
 				win = 0;
 
 			ispis(get<1>(brojceki));
